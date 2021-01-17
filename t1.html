@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="" ng-init="firstName='John';lastName='Doe';
+person={firstName:'John',lastName:'Doe'};
+person_2={firstName:'John2',lastName:'Doe2'};
+person_3={firstName:'John2',lastName:'Doe2'};
+">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<script src="assets/js/angular.min.js"></script>
+	</head>
+	<body class="container bg-dark text-white my-5">
+		<p>The name is {{ firstName + " " + lastName }}</p>
+		<p>The name is <span ng-bind="firstName + ' ' + lastName"></span></p>
+		<p>The name is {{ person.lastName }}</p>
+		<p>The name is {{ person_2.lastName }}</p>
+		<p>The name is {{ person_3.lastName }}</p>
+		<script src="assets/js/main.js"></script>
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
