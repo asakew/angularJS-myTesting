@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="personCtrl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{head_title}}</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<script src="assets/js/angular.min.js"></script>
+	</head>
+	<body class="container my-3 bg-dark text-white">
+
+<p>The name is {{ lastName | uppercase }}</p>
+
+</div>
+
+<script>
+angular.module('myApp', []).controller('personCtrl', function($scope) {
+    $scope.firstName = "John",
+    $scope.lastName = "Doe"
+});
+</script>
+
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>
+<!-- 
+AngularJS Filters
+AngularJS provides filters to transform data:
+
+currency Format a number to a currency format.
+date Format a date to a specified format.
+filter Select a subset of items from an array.
+json Format an object to a JSON string.
+limitTo Limits an array/string, into a specified number of elements/characters.
+lowercase Format a string to lower case.
+number Format a number to a string.
+orderBy Orders an array by an expression.
+uppercase Format a string to upper case. -->

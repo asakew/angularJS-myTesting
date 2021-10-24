@@ -1,7 +1,5 @@
-var app = angular.module("myApp", []);
-app.directive("bodyClass", function() {
-    return {
-        restrict : "C",
-        template : "container bg-dark text-white my-5"
-    };
+app.controller('myCtrl', function($scope) {
+    $scope.head_title = "asaKew";
+    $scope.body_class = "bg-dark text-white";
+    $scope.navbar_brand = "asaKew";
 });

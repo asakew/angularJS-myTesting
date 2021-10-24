@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" ng-controller="costCtrl">
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +8,17 @@
 		<script src="assets/js/angular.min.js"></script>
 	</head>
 	<body class="container my-3 bg-dark text-white">
-
-<div ng-app="myApp" ng-controller="costCtrl">
-
-<h1>Price: {{ price | currency }}</h1>
-
-</div>
-
-<script>
-var app = angular.module('myApp', []);
-app.controller('costCtrl', function($scope) {
-    $scope.price = 100;
-});
-</script>
-
+		<ul>
+			<li ng-repeat="x in names">{{x}}</li>
+		</ul>
+		
+		<script>
+		var app = angular.module('myApp', []);
+		app.controller('myCtrl', function($scope) {
+		$scope.names = ["Emil", "Tobias", "Linus"];
+		});
+		</script>
+		
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>

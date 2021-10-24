@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>{{head_title}}</title>
+		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<script src="assets/js/angular.min.js"></script>
+	</head>
+	<body class="container my-3 bg-dark text-white">
+		
+    <h1 ng-click="changeName()">{{post_davomi}}</h1>
+    <h1 ng-click="changeName_2()">{{post_davomi_2}}</h1>
+    <h1 ng-click="changeName_3()">{{post_davomi_3}}</h1>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+    $scope.post_davomi = "davomini uqish...";
+    $scope.changeName = function() {
+        $scope.post_davomi = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aliquid praesentium explicabo voluptas, iste officiis aperiam hic rerum voluptatum quas amet voluptatem aut. Necessitatibus, accusantium quidem, ipsa ipsum magnam laborum.";
+    } 
+    $scope.post_davomi_2 = "davomini uqish...";
+    $scope.changeName_2 = function() {
+        $scope.post_davomi_2 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aliquid praesentium explicabo voluptas, iste officiis aperiam hic rerum voluptatum quas amet voluptatem aut. Necessitatibus, accusantium quidem, ipsa ipsum magnam laborum.";
+    }
+    $scope.post_davomi_3 = "davomini uqish...";
+    $scope.changeName_3 = function() {
+        $scope.post_davomi_3 = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aliquid praesentium explicabo voluptas, iste officiis aperiam hic rerum voluptatum quas amet voluptatem aut. Necessitatibus, accusantium quidem, ipsa ipsum magnam laborum.";
+    }
+});
+</script>
+		</script>
+		<script src="assets/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

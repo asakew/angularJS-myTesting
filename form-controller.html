@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="myApp" ng-controller="costCtrl">
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,19 +9,21 @@
 	</head>
 	<body class="container my-3 bg-dark text-white">
 
-<div ng-app="myApp" ng-controller="costCtrl">
 
-<h1>Price: {{ price | currency }}</h1>
+First Name: <input type="text" ng-model="firstName"><br>
+Last Name: <input type="text" ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
 
-</div>
 
 <script>
 var app = angular.module('myApp', []);
-app.controller('costCtrl', function($scope) {
-    $scope.price = 100;
+app.controller('myCtrl', function($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
 });
 </script>
-
+		
 		<script src="assets/js/bootstrap.bundle.min.js"></script>
 	</body>
 </html>
